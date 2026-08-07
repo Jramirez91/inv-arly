@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+
+@import "tailwindcss";
+
+/* ─── CSS Custom Properties ────────────────────────────── */
+:root {
+  --primary:              #864d61;
+  --on-primary:           #ffffff;
+  --primary-container:    #ffb7ce;
+  --on-primary-container: #7b4458;
+  --primary-fixed:        #ffd9e3;
+  --primary-fixed-dim:    #fab3ca;
+
+  --secondary:              #406915;
+  --on-secondary:           #ffffff;
+  --secondary-container:    #bdef8b;
+  --on-secondary-container: #446d19;
+  --secondary-fixed:        #c0f18d;
+  --secondary-fixed-dim:    #a5d574;
+
+  --tertiary:              #635979;
+  --on-tertiary:           #ffffff;
+  --tertiary-container:    #d2c5ea;
+  --on-tertiary-container: #5a5070;
+
+  --surface:             #fbf9f8;
+  --surface-container:   #efeded;
+  --on-surface:          #1b1c1c;
+  --on-surface-variant:  #514347;
+  --outline:             #837377;
+  --outline-variant:     #d5c2c6;
+  --inverse-surface:     #303030;
+}
+
+/* ─── Base ──────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ─── Material Symbols ──────────────────────────────────── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  user-select: none;
+}
+
+/* ─── Craft Paper Background ────────────────────────────── */
+.craft-paper-bg {
+  background-color: #fbf9f8;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(255,183,206,0.25) 0%, transparent 45%),
+    radial-gradient(circle at 85% 70%, rgba(189,239,139,0.2) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(210,197,234,0.15) 0%, transparent 50%);
+  min-height: 100vh;
+}
+
+/* ─── Washi Tape ─────────────────────────────────────────── */
+.washi-tape {
+  position: absolute;
+  height: 24px;
+  background: rgba(255, 183, 206, 0.75);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  z-index: 20;
+  border-left: 2px dashed rgba(255,255,255,0.6);
+  border-right: 2px dashed rgba(255,255,255,0.6);
+  mix-blend-mode: multiply;
+}
+
+.washi-green {
+  background: rgba(189, 239, 139, 0.75);
+}
+
+.washi-purple {
+  background: rgba(210, 197, 234, 0.75);
+}
+
+/* ─── Polaroid ───────────────────────────────────────────── */
+.polaroid {
+  background: white;
+  padding: 12px 12px 44px 12px;
+  box-shadow: 2px 4px 18px rgba(0,0,0,0.18);
+  border: 1px solid #eee;
+}
+
+/* ─── Sticker ────────────────────────────────────────────── */
+.sticker {
+  background: white;
+  border: 5px solid white;
+  border-radius: 18px;
+  box-shadow: 2px 4px 14px rgba(0,0,0,0.22);
+  object-fit: cover;
+}
+
+/* ─── Torn Paper ─────────────────────────────────────────── */
+.torn-paper {
+  background: #fff;
+  position: relative;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.08);
+}
+.torn-paper::before,
+.torn-paper::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: inherit;
+}
+.torn-paper::before {
+  top: -4px;
+  clip-path: polygon(0% 100%, 5% 0%, 10% 100%, 15% 0%, 20% 100%, 25% 0%, 30% 100%, 35% 0%, 40% 100%, 45% 0%, 50% 100%, 55% 0%, 60% 100%, 65% 0%, 70% 100%, 75% 0%, 80% 100%, 85% 0%, 90% 100%, 95% 0%, 100% 100%);
+}
+.torn-paper::after {
+  bottom: -4px;
+  clip-path: polygon(0% 0%, 5% 100%, 10% 0%, 15% 100%, 20% 0%, 25% 100%, 30% 0%, 35% 100%, 40% 0%, 45% 100%, 50% 0%, 55% 100%, 60% 0%, 65% 100%, 70% 0%, 75% 100%, 80% 0%, 85% 100%, 90% 0%, 95% 100%, 100% 0%);
+}
+
+/* ─── Scrapbook Card ─────────────────────────────────────── */
+.scrap-card {
+  background: #ffffff;
+  border: 1px solid var(--outline-variant);
+  box-shadow: 2px 4px 16px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scrap-card:hover {
+  box-shadow: 4px 8px 28px rgba(0,0,0,0.15);
+}
+
+/* ─── Buttons ────────────────────────────────────────────── */
+.btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 14px 36px;
+  border: 2px dashed rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(134, 77, 97, 0.4);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 24px;
+  border: 2px dashed rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+}
+
+.btn-secondary:hover {
+  background: var(--secondary-fixed-dim);
+  color: var(--on-secondary-container);
+}
+
+/* ─── Chip / Tag ─────────────────────────────────────────── */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s;
+  user-select: none;
+  border-radius: 4px;
+}
+
+.chip:hover {
+  transform: scale(1.08) rotate(-1deg);
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f3f3f4; }
+::-webkit-scrollbar-thumb { background: var(--primary-container); border-radius: 4px; }
+
+/* ─── Animations ─────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-12px) rotate(3deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-8px) rotate(-2deg); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50%       { transform: rotate(3deg); }
+}
+
+@keyframes bounce-soft {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+/* ─── Reduced Motion ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
