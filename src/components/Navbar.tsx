@@ -1,8 +1,9 @@
 import { Link, useLocation } from 'react-router-dom'
+import { EVENT } from '../assets'
 
 const NAV_ITEMS = [
-  { label: 'Invitación', path: '/',         icon: 'celebration' },
-  { label: 'Detalles',   path: '/detalles', icon: 'info' },
+  { label: 'Invitación', path: '/invitacion', icon: 'celebration' },
+  { label: 'Detalles',   path: '/detalles',   icon: 'info' },
 ]
 
 export default function Navbar() {
@@ -26,9 +27,9 @@ export default function Navbar() {
       <div className="max-w-5xl mx-auto flex items-center justify-between px-6 py-3">
         {/* Logo */}
         <Link
-          to="/"
+          to="/invitacion"
           className="flex items-center gap-2 group hover:scale-105 transition-transform"
-          aria-label="Amelia 4th inicio"
+          aria-label={`${EVENT.title} inicio`}
         >
           <span
             className="material-symbols-outlined text-4xl"

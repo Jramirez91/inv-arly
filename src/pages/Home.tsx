@@ -12,7 +12,12 @@ const fadeUp = {
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center py-12 px-4 md:px-16 gap-16 max-w-5xl mx-auto w-full relative">
+    <motion.main 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 0.2 }}
+      className="flex flex-col items-center py-12 px-4 md:px-16 gap-16 max-w-5xl mx-auto w-full relative"
+    >
 
       {/* ── Fixed background stickers ─────────────────── */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
@@ -201,7 +206,7 @@ export default function Home() {
         </div>
       </motion.section>
 
-    </main>
+    </motion.main>
   )
 }
 

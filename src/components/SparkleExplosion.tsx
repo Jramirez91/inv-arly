@@ -131,14 +131,22 @@ export default function SparkleExplosion() {
       canvas.height = window.innerHeight
     }
     resize()
+    const handleBurst = (e: Event) => {
+      const customEvent = e as CustomEvent
+      const { x, y, count } = customEvent.detail || { x: window.innerWidth / 2, y: window.innerHeight / 2, count: 100 }
+      particlesRef.current.push(...createParticles(x, y, count))
+    }
+
     window.addEventListener('resize', resize)
     window.addEventListener('click', handleClick)
+    window.addEventListener('sparkle-burst', handleBurst)
 
     rafRef.current = requestAnimationFrame(animate)
 
     return () => {
       window.removeEventListener('resize', resize)
       window.removeEventListener('click', handleClick)
+      window.removeEventListener('sparkle-burst', handleBurst)
       cancelAnimationFrame(rafRef.current)
     }
   }, [animate, handleClick])

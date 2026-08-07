@@ -228,6 +228,16 @@ h1, h2, h3, h4, h5, h6 {
   50%       { transform: translateY(-8px); }
 }
 
+/* ─── Custom Utilities ─────────────────────────────────── */
+@layer utilities {
+  .yolo-text-shadow {
+    text-shadow: 3px 3px 0px #06b6d4, -2px -2px 0px #d946ef;
+  }
+  .yolo-box-shadow {
+    box-shadow: 8px 8px 0px #4c1d95;
+  }
+}
+
 /* ─── Reduced Motion ─────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
