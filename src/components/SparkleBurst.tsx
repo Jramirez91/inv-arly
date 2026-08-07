@@ -83,6 +83,7 @@ export default function SparkleBurst() {
     const hide = setTimeout(() => setVisible(false), 3200)
 
     function frame() {
+      if (!ctx) return
       ctx.clearRect(0, 0, W, H)
       let alive = false
 
