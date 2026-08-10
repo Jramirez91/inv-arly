@@ -66,7 +66,7 @@ export const EVENT = {
   headline:    '¡Acompáñanos en un día miau-tástico!',
   subtitle:    '¡Una Celebración Miau-sombrosa!',
   description: 'Te invitamos a un día lleno de magia, chispitas y amistad.',
-  date:        'Sabado 19 de Septiembre',
+  date:        'Sábado 19 de Septiembre',
   time:        '1:00 PM',
   rsvpDeadline:'12 de septiembre',
   phone:       '123.456.7890',

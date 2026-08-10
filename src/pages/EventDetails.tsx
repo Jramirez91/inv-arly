@@ -176,6 +176,113 @@ export default function EventDetails() {
         </div>
       </motion.section>
 
+      {/* ── Gift Suggestions ────────────────────────────── */}
+      <motion.section
+        initial="hidden"
+        animate="visible"
+        viewport={{ once: true }}
+        custom={4}
+        variants={fadeUp}
+        className="w-full relative z-10"
+        aria-labelledby="gifts-heading"
+      >
+        {/* Section header */}
+        <div className="text-center mb-8 relative">
+          <div className="washi-tape absolute -top-3 left-1/2 -translate-x-1/2 w-28 rotate-1" />
+          <h2
+            id="gifts-heading"
+            className="text-2xl font-bold"
+            style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: 'var(--primary)' }}
+          >
+            Ideas de regalo 🎁
+          </h2>
+          <p className="mt-2 text-sm" style={{ fontFamily: '"Be Vietnam Pro", sans-serif', color: 'var(--on-surface-variant)', fontWeight: 600 }}>
+            ¡Lo más importante es tu presencia! Pero si deseas traer un detalle…
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+
+          {/* Clothing size */}
+          <div className="scrap-card p-8 flex flex-col items-center text-center rotate-1 hover:-rotate-1 transition-transform relative">
+            <div className="washi-tape absolute -top-3 left-4 w-16 rotate-6" />
+            <div
+              className="p-4 rounded-full mb-4 border-2 border-dashed"
+              style={{ background: 'var(--primary-container)', borderColor: 'var(--primary)' }}
+            >
+              <span
+                className="material-symbols-outlined text-4xl"
+                style={{ color: 'var(--on-primary-container)', fontVariationSettings: "'FILL' 1" }}
+              >
+                checkroom
+              </span>
+            </div>
+            <span
+              className="uppercase tracking-widest font-bold text-xs mb-2 block"
+              style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: 'var(--on-surface-variant)' }}
+            >
+              TALLA ROPA
+            </span>
+            <p className="text-4xl font-extrabold" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: 'var(--primary)' }}>
+              6
+            </p>
+            <p className="text-xs mt-1 font-semibold" style={{ color: 'var(--on-surface-variant)' }}>niña</p>
+          </div>
+
+          {/* Shoe size */}
+          <div className="scrap-card p-8 flex flex-col items-center text-center -rotate-1 hover:rotate-1 transition-transform relative md:mt-6">
+            <div className="washi-tape washi-green absolute -top-3 right-6 w-16 -rotate-6" />
+            <div
+              className="p-4 rounded-full mb-4 border-2 border-dashed"
+              style={{ background: 'var(--secondary-container)', borderColor: 'var(--secondary)' }}
+            >
+              <span
+                className="material-symbols-outlined text-4xl"
+                style={{ color: 'var(--on-secondary-container)', fontVariationSettings: "'FILL' 1" }}
+              >
+                steps
+              </span>
+            </div>
+            <span
+              className="uppercase tracking-widest font-bold text-xs mb-2 block"
+              style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: 'var(--on-surface-variant)' }}
+            >
+              TALLA ZAPATO
+            </span>
+            <p className="text-4xl font-extrabold" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: 'var(--secondary)' }}>
+              17
+            </p>
+            <p className="text-xs mt-1 font-semibold" style={{ color: 'var(--on-surface-variant)' }}>MX</p>
+          </div>
+
+          {/* Theme suggestion */}
+          <div className="scrap-card p-8 flex flex-col items-center text-center rotate-2 hover:-rotate-1 transition-transform relative">
+            <div className="washi-tape washi-purple absolute -top-3 left-8 w-20 -rotate-3" />
+            <div
+              className="p-4 rounded-full mb-4 border-2 border-dashed"
+              style={{ background: 'var(--tertiary-container)', borderColor: 'var(--tertiary)' }}
+            >
+              <span
+                className="material-symbols-outlined text-4xl"
+                style={{ color: 'var(--on-tertiary-container)', fontVariationSettings: "'FILL' 1" }}
+              >
+                favorite
+              </span>
+            </div>
+            <span
+              className="uppercase tracking-widest font-bold text-xs mb-2 block"
+              style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: 'var(--on-surface-variant)' }}
+            >
+              LE ENCANTA
+            </span>
+            <p className="text-base font-bold leading-snug" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: 'var(--tertiary)' }}>
+              Gabby's<br/>Dollhouse 🐱
+            </p>
+          </div>
+
+        </div>
+      </motion.section>
+
     </main>
   )
 }
