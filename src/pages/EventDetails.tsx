@@ -270,13 +270,21 @@ export default function EventDetails() {
               </span>
             </div>
             <span
-              className="uppercase tracking-widest font-bold text-xs mb-2 block"
+              className="uppercase tracking-widest font-bold text-xs mb-3 block"
               style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: 'var(--on-surface-variant)' }}
             >
               LE ENCANTA
             </span>
             <p className="text-base font-bold leading-snug" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: 'var(--tertiary)' }}>
-              Gabby's<br/>Dollhouse 🐱
+              Gabby's Dollhouse 🐱
+            </p>
+            <div className="w-full flex items-center gap-2 my-2 px-4" aria-hidden="true">
+              <span className="flex-1 h-0.5" style={{ background: 'var(--outline-variant)' }} />
+              <span className="text-xs">🎀</span>
+              <span className="flex-1 h-0.5" style={{ background: 'var(--outline-variant)' }} />
+            </div>
+            <p className="text-base font-bold leading-snug" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: 'var(--tertiary)' }}>
+              Barbie 🎀
             </p>
           </div>
 
