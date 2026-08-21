@@ -65,7 +65,7 @@ export const EVENT = {
   title:       'Arleth cumple 4 años',
   headline:    '¡Acompáñanos en un día miau-tástico!',
   subtitle:    '¡Una Celebración Miau-sombrosa!',
-  description: 'Te invitamos a un día lleno de magia, chispitas y amistad.',
+  description: 'Te invitamos a un día lleno de magia, chispitas y amistad. ¡También habrá un refrescante baño de piscina para la cumpleañera! 🏊‍♀️',
   date:        'Sábado 19 de Septiembre',
   time:        '1:00 PM',
   rsvpDeadline:'12 de septiembre',
@@ -86,4 +86,5 @@ export const ACTIVITIES = [
   { label: 'Piñata',    emoji: '🎊', bg: COLORS.primaryFixed,         color: COLORS.primary,              border: COLORS.primaryContainer     },
   { label: 'Fotos',     emoji: '📸', bg: COLORS.secondaryContainer,   color: COLORS.secondary,            border: COLORS.secondaryFixedDim    },
   { label: 'Sorpresas', emoji: '🎁', bg: COLORS.tertiaryContainer,    color: COLORS.tertiary,             border: '#cdc1e5'                   },
+  { label: 'Piscina',   emoji: '🏊', bg: COLORS.secondaryContainer,   color: COLORS.secondary,            border: COLORS.secondaryFixedDim    },
 ] as const
