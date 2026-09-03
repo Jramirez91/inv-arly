@@ -20,13 +20,13 @@ export default function Home() {
     >
 
       {/* ── Fixed background stickers ─────────────────── */}
-      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <div className="fixed inset-0 pointer-events-none z-0">
         {BACKGROUND_STICKERS.map((s, i) => (
           <img
             key={i}
             src={s.src}
             alt={s.alt}
-            className={`sticker absolute ${s.style} opacity-90`}
+            className={`sticker absolute ${s.style}`}
           />
         ))}
       </div>
@@ -204,6 +204,19 @@ export default function Home() {
             </span>
           ))}
         </div>
+      </motion.section>
+
+      {/* ── CTA Final ─────────────────────────────────── */}
+      <motion.section
+        initial="hidden" animate="visible" custom={2} variants={fadeUp}
+        className="w-full text-center relative z-10 py-4"
+      >
+        <h2
+          className="text-3xl md:text-5xl font-extrabold"
+          style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: 'var(--primary)' }}
+        >
+          ¡No faltes! 🎉
+        </h2>
       </motion.section>
 
     </motion.main>

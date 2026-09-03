@@ -18,11 +18,11 @@ export const STICKER_CAKEY       = img3
 
 /** Stickers en orden con su posición/rotación para el fondo decorativo */
 export const BACKGROUND_STICKERS = [
-  { src: STICKER_GABBY,       alt: 'Gabby',       style: 'top-[4%]  left-[1%]  w-28 h-28 -rotate-6'                 },
-  { src: STICKER_PANDY,       alt: 'Pandy Paws',  style: 'top-[12%] right-[2%] w-36 h-36  rotate-12'                },
-  { src: STICKER_KITTY_FAIRY, alt: 'Kitty Fairy', style: 'bottom-[22%] right-[4%] w-28 h-28 -rotate-12'             },
-  { src: STICKER_DJ_CATNIP,   alt: 'DJ Catnip',   style: 'bottom-[8%]  left-[3%]  w-32 h-32  rotate-3'              },
-  { src: STICKER_CAKEY,       alt: 'Cakey',        style: 'top-[40%] left-[4%]  w-32 h-32  rotate-6 hidden md:block' },
+  { src: STICKER_GABBY,       alt: 'Gabby',       style: 'top-[3%]  left-[2%]  w-16 h-16 md:w-28 md:h-28 -rotate-6 opacity-60 md:opacity-90'  },
+  { src: STICKER_PANDY,       alt: 'Pandy Paws',  style: 'top-[10%] right-[10%] w-18 h-18 md:right-[3%] md:w-36 md:h-36  rotate-12 opacity-60 md:opacity-90' },
+  { src: STICKER_KITTY_FAIRY, alt: 'Kitty Fairy',  style: 'bottom-[25%] right-[7%] w-16 h-16 md:right-[4%] md:w-28 md:h-28 -rotate-12 opacity-60 md:opacity-90' },
+  { src: STICKER_DJ_CATNIP,   alt: 'DJ Catnip',    style: 'bottom-[10%] left-[4%]  w-18 h-18 md:w-32 md:h-32  rotate-3 opacity-60 md:opacity-90'  },
+  { src: STICKER_CAKEY,       alt: 'Cakey',         style: 'top-[40%] left-[4%]  w-18 h-18 md:w-32 md:h-32  rotate-6 hidden md:block' },
 ] as const
 
 // ─── Paleta de colores (Google Stitch · design system) ────────────────────────

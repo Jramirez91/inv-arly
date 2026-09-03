@@ -12,7 +12,7 @@ export default function App() {
   const isSplash = location.pathname === '/'
 
   return (
-    <div className="craft-paper-bg min-h-screen flex flex-col overflow-hidden relative">
+    <div className="craft-paper-bg min-h-screen flex flex-col relative">
       <SparkleExplosion />
 
       {/* Navigation (Hidden on Splash) */}
