@@ -51,21 +51,39 @@ export default function App() {
             </span>
             © {new Date().getFullYear()} La Celebración Miau-tástica de {EVENT.title.split(' ').pop()}
           </div>
-          <div className="flex gap-6 px-6 py-3 border-2 border-dashed" style={{ borderColor: 'var(--secondary-container)' }}>
+          <nav className="flex items-center gap-3">
             {[
-              { label: 'Inicio', path: '/invitacion' },
-              { label: 'Detalles',  path: '/detalles' },
-            ].map((link) => (
-              <a
-                key={link.path}
-                href={link.path}
-                className="font-bold hover:opacity-70 transition-opacity text-sm"
-                style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: 'var(--primary)' }}
-              >
-                {link.label}
-              </a>
+              { label: 'Inicio', path: '/invitacion', icon: 'home' },
+              { label: 'Detalles',  path: '/detalles', icon: 'info' },
+            ].map((link, i, arr) => (
+              <span key={link.path} className="flex items-center gap-3">
+                <a
+                  href={link.path}
+                  className="font-bold hover:scale-105 transition-all text-sm px-4 py-2 border-2 border-dashed inline-flex items-center gap-2"
+                  style={{
+                    fontFamily: '"Plus Jakarta Sans", sans-serif',
+                    color: 'var(--primary)',
+                    background: 'var(--primary-fixed)',
+                    borderColor: 'var(--primary-container)',
+                    borderRadius: '4px',
+                  }}
+                >
+                  <span className="material-symbols-outlined text-base" style={{ fontVariationSettings: "'FILL' 1", fontSize: '18px' }}>
+                    {link.icon}
+                  </span>
+                  {link.label}
+                </a>
+                {i < arr.length - 1 && (
+                  <span
+                    className="text-lg font-bold select-none"
+                    style={{ color: 'var(--outline)' }}
+                  >
+                    ·
+                  </span>
+                )}
+              </span>
             ))}
-          </div>
+          </nav>
         </div>
       </footer>
       )}
